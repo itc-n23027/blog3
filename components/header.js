@@ -1,7 +1,7 @@
 import Logo from 'components/logo'
 import Nav from 'components/nav'
 
-export default function Header () {
+const Header = () => {
   return (
     <header>
       <Logo boxOn />
@@ -9,3 +9,5 @@ export default function Header () {
     </header>
   )
 }
+
+export default Header
