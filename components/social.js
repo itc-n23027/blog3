@@ -7,17 +7,32 @@ import {
   faGithub
 } from '@fortawesome/free-brands-svg-icons'
 
-const Social = () => {
+const Social = ({ iconSize = 'initial' }) => {
   return (
-    <ul className={styles.list}>
-      <FontAwesomeIcon icon={faTwitter} />
-      <span className='sr-only'>Twitter</span>
-      <FontAwesomeIcon icon={faFacebookF} />
-      <span className='sr-only'>Facebook</span>
-      <FontAwesomeIcon icon={faGithub} />
-      <span className='sr-only'>GitHub</span>
+    <ul className={styles.list} style={{ '--icon-size': iconSize }}>
+      {' '}
+      <li>
+        {' '}
+        <a href='https://twitter.com/'>
+          <FontAwesomeIcon icon={faTwitter} />{' '}
+          <span className='sr-only'>Twitter</span>{' '}
+        </a>{' '}
+      </li>{' '}
+      <li>
+        {' '}
+        <a href='https://www.facebook.com/'>
+          <FontAwesomeIcon icon={faFacebookF} />{' '}
+          <span className='sr-only'>Facebook</span>{' '}
+        </a>{' '}
+      </li>{' '}
+      <li>
+        {' '}
+        <a href='https://github.com/'>
+          <FontAwesomeIcon icon={faGithub} />{' '}
+          <span className='sr-only'>Twitter</span>{' '}
+        </a>{' '}
+      </li>{' '}
     </ul>
   )
 }
-
 export default Social
