@@ -3,7 +3,7 @@ import Logo from 'components/logo'
 import Social from 'components/social'
 import styles from 'styles/footer.module.css'
 
-export default function Footer () {
+const Footer = () => {
   return (
     <footer className={styles.wrapper}>
       <Container>
@@ -15,3 +15,5 @@ export default function Footer () {
     </footer>
   )
 }
+
+export default Footer

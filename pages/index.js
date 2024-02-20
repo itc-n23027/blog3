@@ -10,7 +10,7 @@ import { eyecatchLocal } from 'lib/constants'
 
 import { getImageBuffer } from 'lib/getImageBuffer'
 
-export default function Home ({ posts }) {
+const Home = ({ posts }) => {
   return (
     <Container>
       <Meta />
@@ -21,8 +21,9 @@ export default function Home ({ posts }) {
     </Container>
   )
 }
+export default Home
 
-export async function getStaticProps () {
+export const getStaticProps = async () => {
   const posts = await getAllPosts(4)
 
   for (const post of posts) {

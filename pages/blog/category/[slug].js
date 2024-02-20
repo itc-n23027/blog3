@@ -9,7 +9,7 @@ import { eyecatchLocal } from 'lib/constants'
 
 import { getImageBuffer } from 'lib/getImageBuffer'
 
-export default function Category ({ name, posts }) {
+const Category = ({ name, posts }) => {
   return (
     <Container>
       <Meta pageTitle={name} pageDesc={`${name}に関する記事`} />
@@ -18,6 +18,7 @@ export default function Category ({ name, posts }) {
     </Container>
   )
 }
+export default Category
 
 export async function getStaticPaths () {
   const allCats = await getAllCategories()

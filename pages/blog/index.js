@@ -7,7 +7,7 @@ import { getPlaiceholder } from 'plaiceholder'
 import { eyecatchLocal } from 'lib/constants'
 import { getImageBuffer } from 'lib/getImageBuffer'
 
-export default function Blog ({ posts }) {
+const Blog = ({ posts }) => {
   return (
     <Container>
       <Meta pageTitle='ブログ' pageDesc='ブログの記事一覧' />
@@ -18,6 +18,7 @@ export default function Blog ({ posts }) {
     </Container>
   )
 }
+export default Blog
 
 export async function getStaticProps () {
   const posts = await getAllPosts()

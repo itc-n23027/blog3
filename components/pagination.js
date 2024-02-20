@@ -6,12 +6,12 @@ import {
   faChevronRight
 } from '@fortawesome/free-solid-svg-icons'
 
-export default function Pagination ({
+const Pagination = ({
   prevText = '',
   prevUrl = '',
   nextText = '',
   nextUrl = ''
-}) {
+}) => {
   return (
     <ul className={styles.flexContainer}>
       {prevText && prevUrl && (
@@ -33,3 +33,4 @@ export default function Pagination ({
     </ul>
   )
 }
+export default Pagination

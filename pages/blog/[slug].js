@@ -18,7 +18,7 @@ import { getPlaiceholder } from 'plaiceholder'
 import { eyecatchLocal } from 'lib/constants'
 import { getImageBuffer } from 'lib/getImageBuffer'
 
-export default function Post ({
+const Post = ({
   title,
   publish,
   content,
@@ -27,7 +27,7 @@ export default function Post ({
   description,
   prevPost,
   nextPost
-}) {
+}) => {
   return (
     <Container>
       <Meta
@@ -72,6 +72,7 @@ export default function Post ({
     </Container>
   )
 }
+export default Post
 
 export async function getStaticPaths () {
   const allSlugs = await getAllSlugs()

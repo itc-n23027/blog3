@@ -1,7 +1,7 @@
 import parse from 'html-react-parser'
 import Image from 'next/image'
 
-export default function ConvertBody ({ contentHTML }) {
+const ConvertBody = ({ contentHTML }) => {
   const contentReact = parse(contentHTML, {
     replace: node => {
       if (node.name === 'img') {
@@ -21,3 +21,4 @@ export default function ConvertBody ({ contentHTML }) {
   })
   return <>{contentReact}</>
 }
+export default ConvertBody

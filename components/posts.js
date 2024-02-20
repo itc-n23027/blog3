@@ -2,7 +2,7 @@ import styles from 'styles/posts.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 
-export default function Posts ({ posts }) {
+const Posts = ({ posts }) => {
   return (
     <div className={styles.gridContainer}>
       {posts.map(({ title, slug, eyecatch }) => (
@@ -26,3 +26,5 @@ export default function Posts ({ posts }) {
     </div>
   )
 }
+
+export default Posts
